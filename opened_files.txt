@@ -1,3 +1,1 @@
-building_log.txt
-witness_01.txt
-case_overview.txt
+weird_text.txt

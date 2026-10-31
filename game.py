@@ -26,7 +26,7 @@ def show_help():
 
 直接输入文件名即可读取档案，例如：
   case_overview
-  yamada_last_mail.txt
+  a_mysterious_text.txt
 
 文件名可以省略 .txt 扩展名。
 """.strip())
@@ -46,7 +46,7 @@ def read_file(user_input):
     path = FILES_DIR / filename
     file_lists = list_files()
     file_is_opened = path in file_lists
-    if path not in file_lists:
+    if path not in file_lists and path.is_file():
         with open(ROOT / "opened_files.txt", "a", encoding="utf-8") as f:
             f.write(f"{filename}\n")
 
@@ -71,7 +71,7 @@ def read_file(user_input):
 def main():
     clear_screen()
     print("=" * 40)
-    print("         YAMADA CASE // 调查终端")
+    print("         CASE ALPHA 4         ")
     print("=" * 40)
     print("连接状态：本地档案库已挂载")
     print("输入 help 查看命令。")
@@ -79,7 +79,7 @@ def main():
 
     while True:
         try:
-            command = input("CASE:// ").strip()
+            command = input(">: ").strip()
         except (EOFError, KeyboardInterrupt):
             print("\n终止会话。")
             break
