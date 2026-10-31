@@ -26,7 +26,7 @@ def show_help():
 
 直接输入文件名即可读取档案，例如：
   case_overview
-  a_mysterious_text.txt
+  weird_text.txt
 
 文件名可以省略 .txt 扩展名。
 """.strip())
